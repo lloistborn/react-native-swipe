@@ -73362,7 +73362,7 @@ var Deck = function (_Component) {
 						babelHelpers.extends({
 							key: item.id
 						}, _this3.state.panResponder.panHandlers, {
-							style: _this3.getCardStyle(),
+							style: [_this3.getCardStyle(), styles.cardStyle],
 							__source: {
 								fileName: _jsxFileName,
 								lineNumber: 88
@@ -73372,8 +73372,19 @@ var Deck = function (_Component) {
 					);
 				}
 
-				return babelHelpers.extends({}, _this3.props.renderCard(item));
-			});
+				return _react2.default.createElement(
+					_reactNative.View,
+					{
+						key: item.id,
+						style: styles.cardStyle,
+						__source: {
+							fileName: _jsxFileName,
+							lineNumber: 99
+						}
+					},
+					_this3.props.renderCard(item)
+				);
+			}).reverse();
 		}
 	}, {
 		key: "render",
@@ -73383,7 +73394,7 @@ var Deck = function (_Component) {
 				{
 					__source: {
 						fileName: _jsxFileName,
-						lineNumber: 104
+						lineNumber: 111
 					}
 				},
 				this.renderCards()
@@ -73397,6 +73408,15 @@ Deck.defaultProps = {
 	onSwipeRight: function onSwipeRight() {},
 	onSwipeLeft: function onSwipeLeft() {}
 };
+
+
+var styles = {
+	cardStyle: {
+		position: 'absolute',
+		width: SCREEN_WIDTH
+	}
+};
+
 exports.default = Deck;
 }, 554, null, "swipe/src/component/Deck.js");
 ;require(52);
