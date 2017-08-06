@@ -76,10 +76,7 @@ class Deck extends Component {
 	}
 
 	renderCards() {
-		console.log(this.state.index);
-		console.log(this.props.data.length);
 		if (this.state.index >= this.props.data.length) {
-			console.log("masuk");
 			return this.props.renderNoMoreCards();
 		}
 

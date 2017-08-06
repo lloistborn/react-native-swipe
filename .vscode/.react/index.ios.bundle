@@ -1287,18 +1287,18 @@ var swipe = function (_Component) {
 	}, {
 		key: 'renderNoMoreCards',
 		value: function renderNoMoreCards() {
-			_react2.default.createElement(
+			return _react2.default.createElement(
 				_reactNativeElements.Card,
 				{ title: 'No more card', __source: {
 						fileName: _jsxFileName,
-						lineNumber: 44
+						lineNumber: 45
 					}
 				},
 				_react2.default.createElement(
 					_reactNative.Text,
 					{ style: { marginBottom: 10 }, __source: {
 							fileName: _jsxFileName,
-							lineNumber: 45
+							lineNumber: 46
 						}
 					},
 					'No more content left!'
@@ -1308,7 +1308,7 @@ var swipe = function (_Component) {
 					title: 'Load More!',
 					__source: {
 						fileName: _jsxFileName,
-						lineNumber: 48
+						lineNumber: 49
 					}
 				})
 			);
@@ -1320,7 +1320,7 @@ var swipe = function (_Component) {
 				_reactNative.View,
 				{ style: styles.container, __source: {
 						fileName: _jsxFileName,
-						lineNumber: 57
+						lineNumber: 59
 					}
 				},
 				_react2.default.createElement(_Deck2.default, {
@@ -1329,7 +1329,7 @@ var swipe = function (_Component) {
 					renderNoMoreCards: this.renderNoMoreCards,
 					__source: {
 						fileName: _jsxFileName,
-						lineNumber: 58
+						lineNumber: 60
 					}
 				})
 			);
@@ -73349,10 +73349,7 @@ var Deck = function (_Component) {
 		value: function renderCards() {
 			var _this3 = this;
 
-			console.log(this.state.index);
-			console.log(this.props.data.length);
 			if (this.state.index >= this.props.data.length) {
-				console.log("masuk");
 				return this.props.renderNoMoreCards();
 			}
 
@@ -73368,7 +73365,7 @@ var Deck = function (_Component) {
 							style: _this3.getCardStyle(),
 							__source: {
 								fileName: _jsxFileName,
-								lineNumber: 91
+								lineNumber: 88
 							}
 						}),
 						_this3.props.renderCard(item)
@@ -73386,7 +73383,7 @@ var Deck = function (_Component) {
 				{
 					__source: {
 						fileName: _jsxFileName,
-						lineNumber: 107
+						lineNumber: 104
 					}
 				},
 				this.renderCards()

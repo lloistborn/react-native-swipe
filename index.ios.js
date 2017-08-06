@@ -41,15 +41,17 @@ export default class swipe extends Component {
 	}
 
 	renderNoMoreCards() {
-		<Card title = "No more card">
-			<Text style = {{marginBottom: 10}}>
-				No more content left!
-			</Text>
-			<Button 
-				backgroundColor = "#03A9F4"
-				title = "Load More!"
-			/>
-		</Card>
+		return (
+			<Card title = "No more card">
+				<Text style = {{marginBottom: 10}}>
+					No more content left!
+				</Text>
+				<Button 
+					backgroundColor = "#03A9F4"
+					title = "Load More!"
+				/>
+			</Card>
+		);
 	}
 
 	render() {
